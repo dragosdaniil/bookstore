@@ -1,0 +1,87 @@
+@use '../abstracts' as *;
+
+nav{display:flex;
+    position:relative;
+    height: var(--height-4);
+    width: 100%;
+    justify-content: space-between;
+    background-color: var(--color-75);
+
+    ul{ display: flex;
+        position:absolute;
+        top:var(--height-4);
+        left:0;
+        width:100%;
+        height:0;
+        overflow: hidden;
+        transition: $dropdown_animation;
+        list-style-type:none;
+        background-color: inherit;
+        
+        .container{
+            display: flex;
+            margin:0 1rem;
+            width: inherit;
+            height:var(--height-10);
+            align-items: center;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
+
+        li{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            place-items: center;
+
+            a{
+                color: var(--color-35);
+                font-size: var(--font-125);
+                text-decoration: none;
+            }
+        }
+        .active{
+            border-bottom: 5px solid var(--color-35);
+        }
+    }
+
+    .toggle-btn{
+        display: flex;
+        place-items: center;
+        margin: var(--height-1);
+        padding: 5px;
+        color: var(--color-35);
+        font-size: var(--font-150);
+        border:none;
+        border-radius: var(--font-25);
+        background-color: transparent;
+
+    }
+
+    .toggle-btn:hover{
+        transition: $button_hover;
+        background-color:var(--color-65);
+    }
+}
+
+@media screen and (min-width:map-get($breakpoints, "small")){
+    nav{
+        height: var(--height-4) !important;
+    
+        .toggle-btn{
+            display: none;
+        }
+    
+        ul{
+            width:60%;
+            position: static;
+            height: inherit !important;
+            transition: none;
+            .container{
+                height: inherit !important;
+                width: 100%;
+                flex-direction: row;
+            }
+        }
+    }
+}

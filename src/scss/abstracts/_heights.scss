@@ -1,0 +1,5 @@
+:root{
+    @for $i from 1 through 20{
+        --height-#{$i}: #{$i}rem;    
+    }
+}

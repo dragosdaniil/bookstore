@@ -1,0 +1,9 @@
+$primary-color: hsl(13, 92%, 5%);
+
+:root{
+    @for $i from 5 through 100{
+        @if($i%5==0){
+            --color-#{$i}:#{lighten($primary-color, $i)};
+        }
+    }
+}
