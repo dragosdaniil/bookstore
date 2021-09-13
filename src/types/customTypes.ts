@@ -4,5 +4,5 @@ export interface bookTypes {
     price?:Number,
     genre?:string,
     quantity?:Number,
-    image?:string
+    image_url?:string
 }

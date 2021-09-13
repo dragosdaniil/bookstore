@@ -3,7 +3,7 @@
 .new-books-section{
     display: flex;
     width: 100%;
-    align-items: flex-start;
+    align-items: stretch;
     justify-content: center;
     flex-wrap: wrap;
     gap:var(--font-100);

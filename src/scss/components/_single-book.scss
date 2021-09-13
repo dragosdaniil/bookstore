@@ -1,4 +1,10 @@
 .single-book{
-    background-color: var(--blue-10);
-    width:10rem;
+    background-color: transparent;
+    width:calc(var(--font-200) * 10);
+    width: fit-content;
+    padding: 1rem;
+    img{
+        width: calc(var(--font-200) * 10);
+        aspect-ratio: 1/1;
+    }
 }

@@ -176,14 +176,20 @@ nav .toggle-btn:hover {
   }
 }
 .single-book {
-  background-color: var(--blue-10);
-  width: 10rem;
+  background-color: transparent;
+  width: calc(var(--font-200) * 10);
+  width: fit-content;
+  padding: 1rem;
+}
+.single-book img {
+  width: calc(var(--font-200) * 10);
+  aspect-ratio: 1/1;
 }
 
 .new-books-section {
   display: flex;
   width: 100%;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: center;
   flex-wrap: wrap;
   gap: var(--font-100);
