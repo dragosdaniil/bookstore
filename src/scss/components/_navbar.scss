@@ -4,7 +4,7 @@ nav{display:flex;
     position:relative;
     height: var(--height-4);
     justify-content: space-between;
-    background-color: var(--color-75);
+    background-color: var(--green-75);
 
     ul{ display: flex;
         position:absolute;
@@ -33,13 +33,13 @@ nav{display:flex;
             place-items: center;
 
             a{
-                color: var(--color-35);
+                color: var(--green-35);
                 font-size: var(--font-125);
                 text-decoration: none;
             }
         }
         .active{
-            border-bottom: 2px solid var(--color-35);
+            border-bottom: 2px solid var(--green-35);
         }
     }
 
@@ -48,7 +48,7 @@ nav{display:flex;
         place-items: center;
         margin: var(--height-1);
         padding: 5px;
-        color: var(--color-35);
+        color: var(--green-35);
         font-size: var(--font-150);
         border:none;
         border-radius: var(--font-25);
@@ -58,7 +58,7 @@ nav{display:flex;
 
     .toggle-btn:hover{
         transition: $button_hover;
-        background-color:var(--color-65);
+        background-color:var(--green-65);
     }
 }
 

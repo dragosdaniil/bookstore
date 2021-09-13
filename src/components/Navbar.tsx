@@ -19,7 +19,6 @@ const Navbar:React.FC = () => {
     }
 
     const handleClick = (e:any) => {
-        console.log(e.target.parentElement)
         const target = e.target;
         const childs:HTMLCollection|undefined = document.querySelector('.container')?.children;
         if(childs){
@@ -27,8 +26,9 @@ const Navbar:React.FC = () => {
                 childs[i].children[0].classList.remove('active')
             }
         }
-        
-        target.classList.add('active');
+        if(!target.classList.contains('container')){
+            target.classList.add('active')
+        }
     }
 
     useEffect(() => {

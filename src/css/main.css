@@ -1,24 +1,64 @@
 :root {
-  --color-5:#310c02;
-  --color-10:#491203;
-  --color-15:#621804;
-  --color-20:#7a1f05;
-  --color-25:#932506;
-  --color-30:#ab2b07;
-  --color-35:#c43108;
-  --color-40:#dc3709;
-  --color-45:#f53d0a;
-  --color-50:#f65023;
-  --color-55:#f7643b;
-  --color-60:#f87754;
-  --color-65:#f98b6c;
-  --color-70:#fa9e85;
-  --color-75:#fbb19d;
-  --color-80:#fcc5b6;
-  --color-85:#fdd8ce;
-  --color-90:#feece7;
-  --color-95:white;
-  --color-100:white;
+  --blue-5:#020831;
+  --green-5:#02310c;
+  --red-5:#31020c;
+  --blue-10:#030c49;
+  --green-10:#034912;
+  --red-10:#490312;
+  --blue-15:#041162;
+  --green-15:#046218;
+  --red-15:#620418;
+  --blue-20:#05157a;
+  --green-20:#057a1f;
+  --red-20:#7a051f;
+  --blue-25:#061993;
+  --green-25:#069325;
+  --red-25:#930625;
+  --blue-30:#071dab;
+  --green-30:#07ab2b;
+  --red-30:#ab072b;
+  --blue-35:#0821c4;
+  --green-35:#08c431;
+  --red-35:#c40831;
+  --blue-40:#0925dc;
+  --green-40:#09dc37;
+  --red-40:#dc0937;
+  --blue-45:#0a29f5;
+  --green-45:#0af53d;
+  --red-45:#f50a3d;
+  --blue-50:#233ff6;
+  --green-50:#23f650;
+  --red-50:#f62350;
+  --blue-55:#3b54f7;
+  --green-55:#3bf764;
+  --red-55:#f73b64;
+  --blue-60:#546af8;
+  --green-60:#54f877;
+  --red-60:#f85477;
+  --blue-65:#6c7ff9;
+  --green-65:#6cf98b;
+  --red-65:#f96c8b;
+  --blue-70:#8594fa;
+  --green-70:#85fa9e;
+  --red-70:#fa859e;
+  --blue-75:#9daafb;
+  --green-75:#9dfbb1;
+  --red-75:#fb9db1;
+  --blue-80:#b6bffc;
+  --green-80:#b6fcc5;
+  --red-80:#fcb6c5;
+  --blue-85:#ced4fd;
+  --green-85:#cefdd8;
+  --red-85:#fdced8;
+  --blue-90:#e7eafe;
+  --green-90:#e7feec;
+  --red-90:#fee7ec;
+  --blue-95:white;
+  --green-95:white;
+  --red-95:white;
+  --blue-100:white;
+  --green-100:white;
+  --red-100:white;
 }
 
 :root {
@@ -60,7 +100,7 @@ nav {
   position: relative;
   height: var(--height-4);
   justify-content: space-between;
-  background-color: var(--color-75);
+  background-color: var(--green-75);
 }
 nav ul {
   display: flex;
@@ -89,19 +129,19 @@ nav ul li {
   place-items: center;
 }
 nav ul li a {
-  color: var(--color-35);
+  color: var(--green-35);
   font-size: var(--font-125);
   text-decoration: none;
 }
 nav ul .active {
-  border-bottom: 2px solid var(--color-35);
+  border-bottom: 2px solid var(--green-35);
 }
 nav .toggle-btn {
   display: flex;
   place-items: center;
   margin: var(--height-1);
   padding: 5px;
-  color: var(--color-35);
+  color: var(--green-35);
   font-size: var(--font-150);
   border: none;
   border-radius: var(--font-25);
@@ -109,7 +149,7 @@ nav .toggle-btn {
 }
 nav .toggle-btn:hover {
   transition: all 0.2s linear;
-  background-color: var(--color-65);
+  background-color: var(--green-65);
 }
 
 @media screen and (min-width: 600px) {
@@ -136,14 +176,16 @@ nav .toggle-btn:hover {
   }
 }
 .single-book {
-  background-color: var(--color-10);
-  width: 100%;
-  height: 100%;
+  background-color: var(--blue-10);
+  width: 10rem;
 }
 
 .new-books-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: var(--font-100);
 }
 
@@ -154,9 +196,10 @@ nav .toggle-btn:hover {
 }
 
 main {
+  padding: var(--font-100);
   min-height: 100vh;
   width: 100%;
-  background-color: var(--color-90);
+  background-color: var(--green-90);
 }
 
 /*# sourceMappingURL=main.css.map */
