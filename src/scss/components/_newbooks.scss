@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+
+.new-books-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: var(--font-100);
+}
+// @media screen and(min-width:map-get($breakpoints,"small")) {
+//     .new-books-section{
+//         grid-auto-rows: minmax(240px, 1fr);
+//     }
+
+// }

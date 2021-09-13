@@ -6,7 +6,7 @@ const SingleBook:React.FC<bookTypes> = (props:bookTypes) => {
     return (
         <article className="single-book">
             <Link to='/'>
-                <img src={props.image} alt="book-image"  className="book-image"/>
+                <img src={props.image} className="book-image"/>
             </Link>    
             <h3 className="book-title">{props.title}</h3>
             <p className="book-price">{props.price}</p>

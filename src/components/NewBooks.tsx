@@ -10,7 +10,7 @@ const NewBooks:React.FC = () => {
 
     return (
         <section className="new-books-section">
-            {books ? books.map((singleBook:bookTypes, index:number)=><SingleBook {...singleBook} key={index}/>):<article>{"No books have been found"}</article>}
+            {books ? books.slice(0,3).map((singleBook:bookTypes, index:number)=><SingleBook {...singleBook} key={index}/>):<article>{"No books have been found"}</article>}
         </section>
     )
 }

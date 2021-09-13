@@ -5,7 +5,7 @@ import {FaBars} from 'react-icons/fa';
 const Navbar:React.FC = () => {
     const containerRef = useRef<HTMLDivElement|null>(null);
     const listRef = useRef<HTMLUListElement|null>(null);
-    const [dropdown, setDropdown] = useState(true);
+    const [dropdown, setDropdown] = useState(false);
     
     const toggleDropdown = ()=>{
         if(listRef.current){
