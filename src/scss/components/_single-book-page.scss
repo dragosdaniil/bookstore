@@ -1,0 +1,14 @@
+.single-book-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--font-100);
+    img{
+        background-color: blue;
+        width: 60%;
+        max-width: 600px;
+        min-width: 240px;
+        aspect-ratio: 1/1;
+    }
+}

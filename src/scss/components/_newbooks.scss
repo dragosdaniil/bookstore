@@ -7,5 +7,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap:var(--font-100);
-    
+    article{
+        background-color: var(--blue-50);
+    }
 }

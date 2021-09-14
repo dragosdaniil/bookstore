@@ -186,6 +186,21 @@ nav .toggle-btn:hover {
   aspect-ratio: 1/1;
 }
 
+.single-book-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--font-100);
+}
+.single-book-page img {
+  background-color: blue;
+  width: 60%;
+  max-width: 600px;
+  min-width: 240px;
+  aspect-ratio: 1/1;
+}
+
 .new-books-section {
   display: flex;
   width: 100%;
@@ -193,6 +208,9 @@ nav .toggle-btn:hover {
   justify-content: center;
   flex-wrap: wrap;
   gap: var(--font-100);
+}
+.new-books-section article {
+  background-color: var(--blue-50);
 }
 
 *, ::after, ::before {

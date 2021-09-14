@@ -10,8 +10,8 @@ const baseUrl = 'http://localhost:5000/api/v1/books/'
 const AppContext = React.createContext<any|null>(null);
 
 const AppProvider:React.FC<Props> = ({children})=>{
-    const [books, setBooks] = useState<Array<bookTypes|null>>([null]);
-    const [book, setBook] = useState<bookTypes|null>(null);
+    const [books, setBooks] = useState<Array<bookTypes>>([{title:'Arthur',author:'John', image_url:'',price:0,genre:''}]);
+    const [book, setBook] = useState<bookTypes>({title:'Arthur',author:'John', image_url:'',price:0,genre:''});
 
     const token = Buffer.from(`${process.env.USER}:${process.env.PASS}`, 'utf8').toString('base64')
     
@@ -19,7 +19,7 @@ const AppProvider:React.FC<Props> = ({children})=>{
         const response = await axios.get(`${baseUrl}title/${title}`,{headers:{
             'Authorization':`Basic ${token}`
         }});
-        setBook(response.data)
+        setBook(response.data);
     }
 
     const getBooks = async ()=>{
@@ -31,7 +31,7 @@ const AppProvider:React.FC<Props> = ({children})=>{
 
     useEffect(() => {getBooks()}, [])
 
-    return <AppContext.Provider value={{books, book}}>
+    return <AppContext.Provider value={{books, book, getBook}}>
         {children}
     </AppContext.Provider>
 }
