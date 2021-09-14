@@ -10,8 +10,8 @@ const baseUrl = 'http://localhost:5000/api/v1/books/'
 const AppContext = React.createContext<any|null>(null);
 
 const AppProvider:React.FC<Props> = ({children})=>{
-    const [books, setBooks] = useState<Array<bookTypes>>([{title:'Arthur',author:'John', image_url:'',price:0,genre:''}]);
-    const [book, setBook] = useState<bookTypes>({title:'Arthur',author:'John', image_url:'',price:0,genre:''});
+    const [books, setBooks] = useState<Array<bookTypes>>([{title:'Title',author:'Author', image_url:'image_url',price:0,genre:'Fantasy'}]);
+    const [book, setBook] = useState<bookTypes>({title:'Title',author:'Author', image_url:'image_url',price:0,genre:'Fantasy'});
 
     const token = Buffer.from(`${process.env.USER}:${process.env.PASS}`, 'utf8').toString('base64')
     

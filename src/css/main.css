@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
 :root {
   --blue-5:#020831;
   --green-5:#02310c;
@@ -70,6 +71,14 @@
   --font-150: 1.5rem;
   --font-175: 1.75rem;
   --font-200: 2rem;
+  --font-225: 2.25rem;
+  --font-250: 2.5rem;
+  --font-275: 2.75rem;
+  --font-300: 3rem;
+  --font-325: 3.25rem;
+  --font-350: 3.5rem;
+  --font-375: 3.75rem;
+  --font-400: 4rem;
 }
 
 :root {
@@ -93,6 +102,36 @@
   --height-18: 18rem;
   --height-19: 19rem;
   --height-20: 20rem;
+}
+
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Crimson Text", serif;
+}
+
+main {
+  padding: var(--font-100);
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--green-90);
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: var(--font-150);
+}
+
+h4 {
+  font-size: var(--font-125);
+}
+
+p {
+  overflow-wrap: break-word;
 }
 
 nav {
@@ -187,6 +226,7 @@ nav .toggle-btn:hover {
 }
 
 .single-book-page {
+  padding: var(--font-100);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -200,6 +240,23 @@ nav .toggle-btn:hover {
   min-width: 240px;
   aspect-ratio: 1/1;
 }
+.single-book-page .book-info {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-areas: "a d" "b d" "c d" "e e";
+  width: 40%;
+}
+.single-book-page .book-info .book-description {
+  grid-area: e;
+}
+.single-book-page .book-info .book-author {
+  grid-area: b;
+}
+.single-book-page .book-info .book-price {
+  grid-area: d;
+  place-self: center;
+  font-size: var(--font-225);
+}
 
 .new-books-section {
   display: flex;
@@ -211,19 +268,6 @@ nav .toggle-btn:hover {
 }
 .new-books-section article {
   background-color: var(--blue-50);
-}
-
-*, ::after, ::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-main {
-  padding: var(--font-100);
-  min-height: 100vh;
-  width: 100%;
-  background-color: var(--green-90);
 }
 
 /*# sourceMappingURL=main.css.map */

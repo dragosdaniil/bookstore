@@ -1,4 +1,5 @@
 .single-book-page{
+    padding:var(--font-100);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,4 +12,22 @@
         min-width: 240px;
         aspect-ratio: 1/1;
     }
+    .book-info{
+        display:grid;
+        gap: 0.5rem;
+        grid-template-areas: 'a d' 'b d' 'c d' 'e e';
+        width: 40%;
+        .book-description{
+            grid-area: e;
+        }
+        .book-author{
+            grid-area: b;
+        }
+        .book-price{
+            grid-area: d;
+            place-self: center;
+            font-size: var(--font-225);
+        }
+    }
 }
+    
