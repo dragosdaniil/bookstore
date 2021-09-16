@@ -28,23 +28,24 @@ const FilterMenu:React.FC<customProps> = ({books}) => {
     },{genres:[] ,authors:[], minPrice:9999, maxPrice:0})
 
     return (
-        showFilters?<aside className="book-filters">
-        <div className="price-range">
-            <input type="range" min={filters.minPrice} max={filters.maxPrice}/>
-        </div>
-        <ul className="filters-genre">{
-            filters.genres.map((genre:string)=>{
-                <li className="book-genre">{genre}</li>
-            })
-        }</ul>
-        <ul className="filters-author">{
-            filters.authors.map((author:string)=>{
-                <li className="book-author">{author}</li>
-            })
-        }</ul>            
-    </aside>:<button className="toggle-filters-btn">
-            <FaBars />
-        </button>
+        <aside className={showFilters?"book-filters show-filters":"book-filters"}>
+            <button className="toggle-filters-btn" onClick={()=>setShowFilters(!showFilters)}>
+                <FaBars />
+            </button>
+            <div className="price-range">
+                <input type="range" min={filters.minPrice} max={filters.maxPrice}/>
+            </div>
+            <ul className="filters-genre">{
+                filters.genres.map((genre:string)=>{
+                    <li className="book-genre">{genre}</li>
+                })
+            }</ul>
+            <ul className="filters-author">{
+                filters.authors.map((author:string)=>{
+                    <li className="book-author">{author}</li>
+                })
+            }</ul>            
+        </aside>
     )
 }
 
