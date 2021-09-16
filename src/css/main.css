@@ -195,10 +195,24 @@ nav .toggle-btn:hover {
 }
 .single-book-page img {
   background-color: blue;
-  width: 60%;
+  width: 50vw;
   max-width: 600px;
   min-width: 240px;
   aspect-ratio: 1/1;
+}
+.single-book-page .book-info {
+  display: grid;
+  gap: var(--font-50);
+  grid-template-areas: "a b" "c b" "d b" "e e";
+  width: 50vw;
+  max-width: 600px;
+}
+.single-book-page .book-info .book-price {
+  grid-area: b;
+  place-self: center;
+}
+.single-book-page .book-info .book-description {
+  grid-area: e;
 }
 
 .new-books-section {
@@ -224,6 +238,10 @@ main {
   min-height: 100vh;
   width: 100%;
   background-color: var(--green-90);
+}
+
+p {
+  word-break: break-word;
 }
 
 /*# sourceMappingURL=main.css.map */
