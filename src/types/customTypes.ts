@@ -1,8 +1,12 @@
 export interface bookTypes {
     title:string,
     author:string,
-    price?:Number,
+    price?:number,
     genre?:string,
-    quantity?:Number,
+    quantity?:number,
     image_url?:string
+}
+
+export interface customProps {
+    books:Array<bookTypes>
 }

@@ -1,6 +1,7 @@
 @use '../abstracts' as *;
 
-nav{display:flex;
+nav{
+    display:flex;
     position:relative;
     height: var(--height-4);
     justify-content: space-between;
@@ -14,7 +15,6 @@ nav{display:flex;
         width: 100%;
         overflow: hidden;
         transition: $dropdown_animation;
-        list-style-type:none;
         background-color: inherit;
         
         .container{
