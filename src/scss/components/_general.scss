@@ -1,0 +1,16 @@
+*, ::after, ::before {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+main{
+    padding: var(--font-100);
+    min-height:100vh;
+    width: 100%;
+    background-color: var(--green-90);
+}
+
+p{
+    word-break: break-word;
+}

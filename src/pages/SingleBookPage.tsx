@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useGlobalContext } from '../context'
 import { useParams } from 'react-router'
 
@@ -6,7 +6,9 @@ const SingleBookPage:React.FC = () => {
     const {getBook, book} = useGlobalContext();
     console.log(book)
     const {title} = useParams<{title?:string|undefined}>();
-    getBook(title);
+    useEffect(()=>{
+        getBook(title);
+    },[])
     return (
         <main>
            <section className="single-book-page">
@@ -16,7 +18,10 @@ const SingleBookPage:React.FC = () => {
                 <h4 className="book-author">{book.author}</h4>
                 <p className="book-genre">{book.genre}</p>
                 <p className="book-price">{book.price}£</p>
-                <p className="book-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, rem id. Sit suscipit nisi accusamus porro mollitia eum quidem, minus atque delectus perferendis laboriosam magni sapiente doloremque. Repellat inventore ipsa ut dolore corrupti culpa debitis ipsam neque tempora labore, illo placeat laudantium corporis fugit, voluptates mollitia eius rem necessitatibus quae?</p>
+                <p className="book-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Deleniti unde veritatis asperiores eligendi omnis numquam suscipit autem laudantium repudiandae. 
+                Ut velit vero aspernatur tempore voluptatibus suscipit omnis sit pariatur laboriosam consequuntur eaque, 
+                praesentium iste error mollitia cum ad autem cumque minus aut tempora consectetur est expedita amet. Voluptatem, deserunt possimus?</p>
             </div>
            </section>
         </main>

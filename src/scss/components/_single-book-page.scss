@@ -7,27 +7,23 @@
     gap: var(--font-100);
     img{
         background-color: blue;
-        width: 60%;
+        width: 50vw;
         max-width: 600px;
         min-width: 240px;
         aspect-ratio: 1/1;
     }
     .book-info{
         display:grid;
-        gap: 0.5rem;
-        grid-template-areas: 'a d' 'b d' 'c d' 'e e';
-        width: 40%;
+        gap: var(--font-50);
+        grid-template-areas: 'a b' 'c b' 'd b' 'e e';
+        width: 50vw;
+        max-width: 600px;
+        .book-price{
+            grid-area: b;
+            place-self: center
+        }
         .book-description{
             grid-area: e;
         }
-        .book-author{
-            grid-area: b;
-        }
-        .book-price{
-            grid-area: d;
-            place-self: center;
-            font-size: var(--font-225);
-        }
     }
 }
-    
