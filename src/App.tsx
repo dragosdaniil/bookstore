@@ -6,6 +6,7 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import ShoppingCart from './pages/ShoppingCart';
 import SingleBookPage from './pages/SingleBookPage';
+import Books from './pages/Books';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
       <Switch>
         <Route exact path='/'>
           <Home />
+        </Route>
+        <Route path='/books'>
+          <Books />
         </Route>
         <Route path='/book/:title'>
           <SingleBookPage />

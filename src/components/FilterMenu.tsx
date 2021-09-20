@@ -33,14 +33,14 @@ const FilterMenu:React.FC<customProps> = ({books}) => {
                 <FaBars />
             </button>
             <div className="price-range">
-                <input type="range" min={filters.minPrice} max={filters.maxPrice}/>
+                <input type="range" min={10} max={50}/>
             </div>
-            <ul className="filters-genre">{
+            <ul className="genre-filter">{
                 filters.genres.map((genre:string)=>{
                     <li className="book-genre">{genre}</li>
                 })
             }</ul>
-            <ul className="filters-author">{
+            <ul className="author-filter">{
                 filters.authors.map((author:string)=>{
                     <li className="book-author">{author}</li>
                 })

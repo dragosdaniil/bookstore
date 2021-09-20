@@ -7,12 +7,12 @@ import FilterMenu from '../components/FilterMenu';
 const Books = () => {
     const {books} = useGlobalContext();
     return (
-        <section className="books-page">
+        <main className="books-page">
             <FilterMenu books={books}/>
             {
                 books.map((book:bookTypes, index:number)=><SingleBook {...book} key={index}/>)
             }
-        </section>
+        </main>
     )
 }
 

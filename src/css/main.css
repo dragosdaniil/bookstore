@@ -150,7 +150,6 @@ nav ul {
   width: 100%;
   overflow: hidden;
   transition: all 0.5s linear;
-  list-style-type: none;
   background-color: inherit;
 }
 nav ul .container {
@@ -282,6 +281,52 @@ main {
 
 p {
   word-break: break-word;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.book-filters {
+  display: grid;
+  place-items: center;
+  width: 20rem;
+  grid-template-areas: "a b" "c d" "e f";
+  grid-template-columns: 80% 20%;
+  padding: var(--font-100);
+  row-gap: var(--font-50);
+  position: relative;
+  transform: translateX(calc(-80% - var(--font-100)));
+}
+.book-filters button {
+  grid-area: b;
+  height: 2rem;
+  width: 2rem;
+  background-color: inherit;
+  font-size: var(--font-150);
+  border: none;
+  border-radius: var(--font-25);
+  outline: none;
+  color: var(--blue-40);
+}
+.book-filters .price-range {
+  grid-area: a;
+}
+.book-filters .genre-filter {
+  height: 4rem;
+  width: 100%;
+  background-color: var(--blue-50);
+  grid-area: c;
+}
+.book-filters .author-filter {
+  grid-area: e;
+  height: 4rem;
+  width: 100%;
+  background-color: var(--green-50);
+}
+
+.show-filters {
+  transform: translateX(0);
 }
 
 /*# sourceMappingURL=main.css.map */
