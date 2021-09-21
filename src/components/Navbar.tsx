@@ -23,7 +23,9 @@ const Navbar:React.FC = () => {
         const childs:HTMLCollection|undefined = document.querySelector('.container')?.children;
         if(childs){
             for(let i=0;i<childs?.length;i++){
-                childs[i].children[0].classList.remove('active')
+                if(!childs[i].classList.contains('search-bar')){
+                    childs[i].children[0].classList.remove('active');
+                }
             }
         }
         if(!target.classList.contains('container')){
@@ -43,6 +45,7 @@ const Navbar:React.FC = () => {
         <nav className="navbar">
             <ul className="nav-list" ref={listRef}>
                <div className="container" ref={containerRef}>
+               <input type="text" placeholder="Search" className="search-bar"/>
                <li>
                     <Link to='/'>
                         Home

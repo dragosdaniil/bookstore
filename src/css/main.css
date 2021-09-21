@@ -152,11 +152,26 @@ nav ul {
   transition: all 0.5s linear;
   background-color: inherit;
 }
+nav ul input {
+  width: 100%;
+  height: 90%;
+  border: solid var(--font-25) var(--green-40);
+  border-radius: var(--font-25);
+  outline: none;
+  font-size: var(--font-125);
+}
+nav ul input::placeholder {
+  display: flex;
+  align-items: center;
+  padding-left: var(--font-50);
+  font-size: var(--font-125);
+}
 nav ul .container {
   display: flex;
   margin: 0 auto;
-  padding: 1rem;
+  padding: var(--font-50);
   height: var(--height-10);
+  width: 80%;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
@@ -202,6 +217,10 @@ nav .toggle-btn:hover {
     height: inherit !important;
     transition: none;
     width: 100%;
+  }
+  nav ul input {
+    width: 20%;
+    height: 75%;
   }
   nav ul .container {
     height: inherit !important;
@@ -297,6 +316,7 @@ ul {
   row-gap: var(--font-50);
   position: relative;
   transform: translateX(calc(-80% - var(--font-100)));
+  transition: all 0.5s linear;
 }
 .book-filters button {
   grid-area: b;
