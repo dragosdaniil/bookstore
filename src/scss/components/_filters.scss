@@ -8,6 +8,7 @@
     row-gap: var(--font-50);
     position:relative;
     transform: translateX(calc(-80% - var(--font-100)));
+    transition:$dropdown_animation;
 
     button{
         grid-area: b;
