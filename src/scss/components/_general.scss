@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 *, ::after, ::before {
     margin:0;
     padding:0;
@@ -5,15 +7,34 @@
 }
 
 main{
-    padding: var(--font-100);
+    margin:0 auto;
+    padding: var(--height-1);
+    width: 90vw;
     min-height:100vh;
-    width: 100%;
-    background-color: var(--green-90);
+    background-color: var(--blue-95);
+}
+
+button{
+    display: flex;
+    place-items: center;
+    margin: 0 var(--height-1);
+    padding: 5px;
+    border:none;
+    border-radius: var(--font-25);
+    background-color: transparent;
+    color: var(--blue-15);
+    font-size: var(--height-2);
+}
+
+button:hover{
+    transition: $button_hover;
+    background-color:var(--blue-50);
 }
 
 p{
     word-break: break-word;
 }
+
 ul{
     list-style-type:none;
 }

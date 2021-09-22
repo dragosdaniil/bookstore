@@ -5,10 +5,10 @@
     width: 20rem;
     grid-template-areas: 'a b' 'c d' 'e f';
     grid-template-columns: 80% 20%;
-    padding: var(--font-100);
+    padding: var(--height-1);
     row-gap: var(--font-50);
     position:relative;
-    transform: translateX(calc(-80% - var(--font-100)));
+    transform: translateX(calc(-80% - var(--height-1)));
     transition:$dropdown_animation;
 
     button{

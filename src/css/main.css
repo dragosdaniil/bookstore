@@ -137,14 +137,15 @@ p {
 nav {
   display: flex;
   position: relative;
-  height: var(--height-4);
+  height: var(--height-5);
   justify-content: space-between;
-  background-color: var(--green-75);
+  align-items: center;
+  background-color: var(--blue-75);
 }
 nav ul {
   display: flex;
   position: absolute;
-  top: var(--height-4);
+  top: var(--height-5);
   left: 0;
   height: 0;
   width: 100%;
@@ -153,12 +154,18 @@ nav ul {
   background-color: inherit;
 }
 nav ul input {
+  margin: 0 auto;
   width: 100%;
-  height: 90%;
-  border: solid var(--font-25) var(--green-40);
+  max-width: 350px;
+  min-width: 300px;
+  height: var(--font-250);
+  border: solid 0.2rem var(--blue-40);
   border-radius: var(--font-25);
   outline: none;
   font-size: var(--font-125);
+}
+nav ul input:focus {
+  border-color: var(--blue-30);
 }
 nav ul input::placeholder {
   display: flex;
@@ -171,7 +178,6 @@ nav ul .container {
   margin: 0 auto;
   padding: var(--font-50);
   height: var(--height-10);
-  width: 80%;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
@@ -182,27 +188,12 @@ nav ul li {
   place-items: center;
 }
 nav ul li a {
-  color: var(--green-35);
+  color: var(--blue-35);
   font-size: var(--font-125);
   text-decoration: none;
 }
 nav ul .active {
-  border-bottom: 2px solid var(--green-35);
-}
-nav .toggle-btn {
-  display: flex;
-  place-items: center;
-  margin: var(--height-1);
-  padding: 5px;
-  color: var(--green-35);
-  font-size: var(--font-150);
-  border: none;
-  border-radius: var(--font-25);
-  background-color: transparent;
-}
-nav .toggle-btn:hover {
-  transition: all 0.2s linear;
-  background-color: var(--green-65);
+  border-bottom: 2px solid var(--blue-35);
 }
 
 @media screen and (min-width: 600px) {
@@ -216,17 +207,15 @@ nav .toggle-btn:hover {
     position: static;
     height: inherit !important;
     transition: none;
-    width: 100%;
   }
   nav ul input {
-    width: 20%;
-    height: 75%;
+    height: var(--font-250);
   }
   nav ul .container {
     height: inherit !important;
     width: 100%;
     flex-direction: row;
-    column-gap: 1rem;
+    column-gap: var(--height-1);
   }
   nav ul .container li:nth-of-type(1) {
     margin-left: auto;
@@ -234,22 +223,22 @@ nav .toggle-btn:hover {
 }
 .single-book {
   background-color: transparent;
-  width: calc(var(--font-200) * 10);
+  width: calc(var(--height-2) * 10);
   width: fit-content;
   padding: 1rem;
 }
 .single-book img {
-  width: calc(var(--font-200) * 10);
+  width: calc(var(--height-2) * 10);
   aspect-ratio: 1/1;
 }
 
 .single-book-page {
-  padding: var(--font-100);
+  padding: var(--height-1);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: var(--font-100);
+  gap: var(--height-1);
 }
 .single-book-page img {
   background-color: blue;
@@ -279,7 +268,7 @@ nav .toggle-btn:hover {
   align-items: stretch;
   justify-content: center;
   flex-wrap: wrap;
-  gap: var(--font-100);
+  gap: var(--height-1);
 }
 .new-books-section article {
   background-color: var(--blue-50);
@@ -292,10 +281,28 @@ nav .toggle-btn:hover {
 }
 
 main {
-  padding: var(--font-100);
+  margin: 0 auto;
+  padding: var(--height-1);
+  width: 90vw;
   min-height: 100vh;
-  width: 100%;
-  background-color: var(--green-90);
+  background-color: var(--blue-95);
+}
+
+button {
+  display: flex;
+  place-items: center;
+  margin: 0 var(--height-1);
+  padding: 5px;
+  border: none;
+  border-radius: var(--font-25);
+  background-color: transparent;
+  color: var(--blue-15);
+  font-size: var(--height-2);
+}
+
+button:hover {
+  transition: all 0.2s linear;
+  background-color: var(--blue-50);
 }
 
 p {
@@ -312,10 +319,10 @@ ul {
   width: 20rem;
   grid-template-areas: "a b" "c d" "e f";
   grid-template-columns: 80% 20%;
-  padding: var(--font-100);
+  padding: var(--height-1);
   row-gap: var(--font-50);
   position: relative;
-  transform: translateX(calc(-80% - var(--font-100)));
+  transform: translateX(calc(-80% - var(--height-1)));
   transition: all 0.5s linear;
 }
 .book-filters button {
