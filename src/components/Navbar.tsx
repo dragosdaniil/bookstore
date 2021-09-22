@@ -44,9 +44,9 @@ const Navbar:React.FC = () => {
     return (
         <nav className="navbar">
             <ul className="nav-list" ref={listRef}>
-               <div className="container" ref={containerRef}>
-               <input type="text" placeholder="Search" className="search-bar"/>
-               <li>
+                <div className="container" ref={containerRef}>
+                <input type="text" placeholder="Search" className="search-bar"/>
+                <li>
                     <Link to='/'>
                         Home
                     </Link>
