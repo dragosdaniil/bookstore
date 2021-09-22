@@ -1,0 +1,10 @@
+@use '../abstracts' as *;
+.sort-bar{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding:0 var(--font-50);
+    width: 100%;
+    height:var(--height-2);
+    background-color: var(--blue-75);
+}

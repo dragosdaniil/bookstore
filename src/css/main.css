@@ -1,57 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
 :root {
-  --blue-5:#020831;
+  --blue-5:#021031;
   --green-5:#02310c;
   --red-5:#31020c;
-  --blue-10:#030c49;
+  --blue-10:#031849;
   --green-10:#034912;
   --red-10:#490312;
-  --blue-15:#041162;
+  --blue-15:#042062;
   --green-15:#046218;
   --red-15:#620418;
-  --blue-20:#05157a;
+  --blue-20:#05287a;
   --green-20:#057a1f;
   --red-20:#7a051f;
-  --blue-25:#061993;
+  --blue-25:#063093;
   --green-25:#069325;
   --red-25:#930625;
-  --blue-30:#071dab;
+  --blue-30:#0738ab;
   --green-30:#07ab2b;
   --red-30:#ab072b;
-  --blue-35:#0821c4;
+  --blue-35:#0840c4;
   --green-35:#08c431;
   --red-35:#c40831;
-  --blue-40:#0925dc;
+  --blue-40:#0949dc;
   --green-40:#09dc37;
   --red-40:#dc0937;
-  --blue-45:#0a29f5;
+  --blue-45:#0a51f5;
   --green-45:#0af53d;
   --red-45:#f50a3d;
-  --blue-50:#233ff6;
+  --blue-50:#2362f6;
   --green-50:#23f650;
   --red-50:#f62350;
-  --blue-55:#3b54f7;
+  --blue-55:#3b73f7;
   --green-55:#3bf764;
   --red-55:#f73b64;
-  --blue-60:#546af8;
+  --blue-60:#5485f8;
   --green-60:#54f877;
   --red-60:#f85477;
-  --blue-65:#6c7ff9;
+  --blue-65:#6c96f9;
   --green-65:#6cf98b;
   --red-65:#f96c8b;
-  --blue-70:#8594fa;
+  --blue-70:#85a8fa;
   --green-70:#85fa9e;
   --red-70:#fa859e;
-  --blue-75:#9daafb;
+  --blue-75:#9db9fb;
   --green-75:#9dfbb1;
   --red-75:#fb9db1;
-  --blue-80:#b6bffc;
+  --blue-80:#b6cbfc;
   --green-80:#b6fcc5;
   --red-80:#fcb6c5;
-  --blue-85:#ced4fd;
+  --blue-85:#cedcfd;
   --green-85:#cefdd8;
   --red-85:#fdced8;
-  --blue-90:#e7eafe;
+  --blue-90:#e7eefe;
   --green-90:#e7feec;
   --red-90:#fee7ec;
   --blue-95:white;
@@ -102,36 +102,6 @@
   --height-18: 18rem;
   --height-19: 19rem;
   --height-20: 20rem;
-}
-
-*, ::after, ::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Crimson Text", serif;
-}
-
-main {
-  padding: var(--font-100);
-  min-height: 100vh;
-  width: 100%;
-  background-color: var(--green-90);
-}
-
-h1, h2, h3, h4 {
-  letter-spacing: 2px;
-}
-
-h3 {
-  font-size: var(--font-150);
-}
-
-h4 {
-  font-size: var(--font-125);
-}
-
-p {
-  overflow-wrap: break-word;
 }
 
 nav {
@@ -233,7 +203,6 @@ nav ul .active {
 }
 
 .single-book-page {
-  padding: var(--height-1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -278,18 +247,12 @@ nav ul .active {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  background-color: white;
+  font-family: "Crimson Text", serif;
 }
 
 main {
-  margin: 0 auto;
-  padding: var(--height-1);
-  width: 100vw;
   min-height: 100vh;
-  background-color: var(--blue-85);
+  background-color: var(--blue-100);
   position: relative;
 }
 
@@ -319,8 +282,8 @@ ul {
 }
 
 .book-filters {
+  display: none;
   padding: var(--height-1);
-  display: grid;
   place-items: center;
   width: var(--height-20);
   grid-template-areas: "a b" "c d" "e f";
@@ -354,6 +317,30 @@ ul {
 
 .show-filters {
   transform: translateX(0);
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: var(--height-1);
+  width: 90vw;
+  background-color: var(--blue-85);
+}
+.center-container .books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+}
+
+.sort-bar {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 0 var(--font-50);
+  width: 100%;
+  height: var(--height-2);
+  background-color: var(--blue-75);
 }
 
 /*# sourceMappingURL=main.css.map */

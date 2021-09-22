@@ -1,21 +1,16 @@
 @use '../abstracts' as *;
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');
 
 *, ::after, ::before {
     margin:0;
     padding:0;
     box-sizing: border-box;
-}
-
-body{
-    background-color: white;
+    font-family: 'Crimson Text', serif;
 }
 
 main{
-    margin:0 auto;
-    padding: var(--height-1);
-    width: 100vw;
     min-height:100vh;
-    background-color: var(--blue-85);
+    background-color: var(--blue-100);
     position:relative;
 }
 

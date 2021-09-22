@@ -1,7 +1,8 @@
 @use '../abstracts' as *;
 .book-filters{
+    display: none;
     padding: var(--height-1);
-    display: grid;
+    // display: grid;
     place-items: center;
     width: var(--height-20);
     grid-template-areas: 'a b' 'c d' 'e f';
