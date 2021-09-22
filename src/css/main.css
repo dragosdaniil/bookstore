@@ -280,12 +280,17 @@ nav ul .active {
   box-sizing: border-box;
 }
 
+body {
+  background-color: white;
+}
+
 main {
   margin: 0 auto;
   padding: var(--height-1);
-  width: 90vw;
+  width: 100vw;
   min-height: 100vh;
-  background-color: var(--blue-95);
+  background-color: var(--blue-85);
+  position: relative;
 }
 
 button {
@@ -314,15 +319,14 @@ ul {
 }
 
 .book-filters {
+  padding: var(--height-1);
   display: grid;
   place-items: center;
-  width: 20rem;
+  width: var(--height-20);
   grid-template-areas: "a b" "c d" "e f";
   grid-template-columns: 80% 20%;
-  padding: var(--height-1);
   row-gap: var(--font-50);
-  position: relative;
-  transform: translateX(calc(-80% - var(--height-1)));
+  transform: translateX(calc(-80%));
   transition: all 0.5s linear;
 }
 .book-filters button {
@@ -331,10 +335,6 @@ ul {
   width: 2rem;
   background-color: inherit;
   font-size: var(--font-150);
-  border: none;
-  border-radius: var(--font-25);
-  outline: none;
-  color: var(--blue-40);
 }
 .book-filters .price-range {
   grid-area: a;

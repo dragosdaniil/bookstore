@@ -6,12 +6,17 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: white;
+}
+
 main{
     margin:0 auto;
     padding: var(--height-1);
-    width: 90vw;
+    width: 100vw;
     min-height:100vh;
-    background-color: var(--blue-95);
+    background-color: var(--blue-85);
+    position:relative;
 }
 
 button{
