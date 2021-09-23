@@ -5,7 +5,8 @@ interface Props{
     children:any;
 }
 
-const baseUrl = 'http://localhost:5000/api/v1/books/'
+const baseUrl = 'http://localhost:5000/api/v1'
+const LAN_URL = `http://${process.env.LAN_URL}:5000/api/v1`
 
 const AppContext = React.createContext<any|null>(null);
 
@@ -16,17 +17,18 @@ const AppProvider:React.FC<Props> = ({children})=>{
     const token = Buffer.from(`${process.env.USER}:${process.env.PASS}`, 'utf8').toString('base64')
     
     const getBook = async (title:string)=>{
-        const response = await axios.get(`${baseUrl}title/${title}`,{headers:{
+        const response = await axios.get(`${baseUrl}/books/title/${title}`,{headers:{
             'Authorization':`Basic ${token}`
         }});
         setBook(response.data);
     }
 
     const getBooks = async ()=>{
-        const response = await axios.get(baseUrl, {headers:{
+        const response = await axios.get(`${baseUrl}/books/`, {headers:{
             'Authorization':`Basic ${token}`
         }});
         setBooks(response.data);
+        console.log(books)
     }
 
     useEffect(() => {getBooks()}, [])

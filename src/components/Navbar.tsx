@@ -44,7 +44,7 @@ const Navbar:React.FC = () => {
 
     return (
         <nav className="navbar">
-            <Link to='/'>
+            <Link to='/home'>
                 <button className="logo">
                     <GiBookshelf />
                 </button>
@@ -58,7 +58,7 @@ const Navbar:React.FC = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to='/'>
+                    <Link to='/home'>
                         Home
                     </Link>
                 </li>
