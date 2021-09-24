@@ -10,3 +10,7 @@ export interface bookTypes {
 export interface customProps {
     books:Array<bookTypes>
 }
+
+export interface Props{
+    children:any;
+}
