@@ -3,6 +3,7 @@ import {bookTypes} from '../types/customTypes'
 import { Link } from 'react-router-dom'
 
 const SingleBook:React.FC<bookTypes> = (props:bookTypes) => {
+    console.log(props.title)
     return (
         <article className="single-book">
             <Link to={`/book/${props.title}`}>

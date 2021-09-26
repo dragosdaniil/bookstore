@@ -1,57 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap");
 :root {
-  --blue-5:#020831;
+  --blue-5:#021031;
   --green-5:#02310c;
   --red-5:#31020c;
-  --blue-10:#030c49;
+  --blue-10:#031849;
   --green-10:#034912;
   --red-10:#490312;
-  --blue-15:#041162;
+  --blue-15:#042062;
   --green-15:#046218;
   --red-15:#620418;
-  --blue-20:#05157a;
+  --blue-20:#05287a;
   --green-20:#057a1f;
   --red-20:#7a051f;
-  --blue-25:#061993;
+  --blue-25:#063093;
   --green-25:#069325;
   --red-25:#930625;
-  --blue-30:#071dab;
+  --blue-30:#0738ab;
   --green-30:#07ab2b;
   --red-30:#ab072b;
-  --blue-35:#0821c4;
+  --blue-35:#0840c4;
   --green-35:#08c431;
   --red-35:#c40831;
-  --blue-40:#0925dc;
+  --blue-40:#0949dc;
   --green-40:#09dc37;
   --red-40:#dc0937;
-  --blue-45:#0a29f5;
+  --blue-45:#0a51f5;
   --green-45:#0af53d;
   --red-45:#f50a3d;
-  --blue-50:#233ff6;
+  --blue-50:#2362f6;
   --green-50:#23f650;
   --red-50:#f62350;
-  --blue-55:#3b54f7;
+  --blue-55:#3b73f7;
   --green-55:#3bf764;
   --red-55:#f73b64;
-  --blue-60:#546af8;
+  --blue-60:#5485f8;
   --green-60:#54f877;
   --red-60:#f85477;
-  --blue-65:#6c7ff9;
+  --blue-65:#6c96f9;
   --green-65:#6cf98b;
   --red-65:#f96c8b;
-  --blue-70:#8594fa;
+  --blue-70:#85a8fa;
   --green-70:#85fa9e;
   --red-70:#fa859e;
-  --blue-75:#9daafb;
+  --blue-75:#9db9fb;
   --green-75:#9dfbb1;
   --red-75:#fb9db1;
-  --blue-80:#b6bffc;
+  --blue-80:#b6cbfc;
   --green-80:#b6fcc5;
   --red-80:#fcb6c5;
-  --blue-85:#ced4fd;
+  --blue-85:#cedcfd;
   --green-85:#cefdd8;
   --red-85:#fdced8;
-  --blue-90:#e7eafe;
+  --blue-90:#e7eefe;
   --green-90:#e7feec;
   --red-90:#fee7ec;
   --blue-95:white;
@@ -104,47 +104,18 @@
   --height-20: 20rem;
 }
 
-*, ::after, ::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Crimson Text", serif;
-}
-
-main {
-  padding: var(--font-100);
-  min-height: 100vh;
-  width: 100%;
-  background-color: var(--green-90);
-}
-
-h1, h2, h3, h4 {
-  letter-spacing: 2px;
-}
-
-h3 {
-  font-size: var(--font-150);
-}
-
-h4 {
-  font-size: var(--font-125);
-}
-
-p {
-  overflow-wrap: break-word;
-}
-
 nav {
   display: flex;
   position: relative;
-  height: var(--height-4);
+  height: var(--height-5);
   justify-content: space-between;
-  background-color: var(--green-75);
+  align-items: center;
+  background-color: var(--blue-75);
 }
 nav ul {
   display: flex;
   position: absolute;
-  top: var(--height-4);
+  top: var(--height-5);
   left: 0;
   height: 0;
   width: 100%;
@@ -153,12 +124,18 @@ nav ul {
   background-color: inherit;
 }
 nav ul input {
+  margin: 0 auto;
   width: 100%;
-  height: 90%;
-  border: solid var(--font-25) var(--green-40);
+  max-width: 350px;
+  min-width: 300px;
+  height: var(--font-250);
+  border: solid 0.2rem var(--blue-40);
   border-radius: var(--font-25);
   outline: none;
   font-size: var(--font-125);
+}
+nav ul input:focus {
+  border-color: var(--blue-30);
 }
 nav ul input::placeholder {
   display: flex;
@@ -171,7 +148,6 @@ nav ul .container {
   margin: 0 auto;
   padding: var(--font-50);
   height: var(--height-10);
-  width: 80%;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
@@ -182,27 +158,12 @@ nav ul li {
   place-items: center;
 }
 nav ul li a {
-  color: var(--green-35);
+  color: var(--blue-35);
   font-size: var(--font-125);
   text-decoration: none;
 }
 nav ul .active {
-  border-bottom: 2px solid var(--green-35);
-}
-nav .toggle-btn {
-  display: flex;
-  place-items: center;
-  margin: var(--height-1);
-  padding: 5px;
-  color: var(--green-35);
-  font-size: var(--font-150);
-  border: none;
-  border-radius: var(--font-25);
-  background-color: transparent;
-}
-nav .toggle-btn:hover {
-  transition: all 0.2s linear;
-  background-color: var(--green-65);
+  border-bottom: 2px solid var(--blue-35);
 }
 
 @media screen and (min-width: 600px) {
@@ -216,17 +177,15 @@ nav .toggle-btn:hover {
     position: static;
     height: inherit !important;
     transition: none;
-    width: 100%;
   }
   nav ul input {
-    width: 20%;
-    height: 75%;
+    height: var(--font-250);
   }
   nav ul .container {
     height: inherit !important;
     width: 100%;
     flex-direction: row;
-    column-gap: 1rem;
+    column-gap: var(--height-1);
   }
   nav ul .container li:nth-of-type(1) {
     margin-left: auto;
@@ -234,22 +193,21 @@ nav .toggle-btn:hover {
 }
 .single-book {
   background-color: transparent;
-  width: calc(var(--font-200) * 10);
+  width: calc(var(--height-2) * 10);
   width: fit-content;
   padding: 1rem;
 }
 .single-book img {
-  width: calc(var(--font-200) * 10);
+  width: calc(var(--height-2) * 10);
   aspect-ratio: 1/1;
 }
 
 .single-book-page {
-  padding: var(--font-100);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: var(--font-100);
+  gap: var(--height-1);
 }
 .single-book-page img {
   background-color: blue;
@@ -279,7 +237,7 @@ nav .toggle-btn:hover {
   align-items: stretch;
   justify-content: center;
   flex-wrap: wrap;
-  gap: var(--font-100);
+  gap: var(--height-1);
 }
 .new-books-section article {
   background-color: var(--blue-50);
@@ -289,13 +247,30 @@ nav .toggle-btn:hover {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Crimson Text", serif;
 }
 
 main {
-  padding: var(--font-100);
   min-height: 100vh;
-  width: 100%;
-  background-color: var(--green-90);
+  background-color: var(--blue-100);
+  position: relative;
+}
+
+button {
+  display: flex;
+  place-items: center;
+  margin: 0 var(--height-1);
+  padding: 5px;
+  border: none;
+  border-radius: var(--font-25);
+  background-color: transparent;
+  color: var(--blue-15);
+  font-size: var(--height-2);
+}
+
+button:hover {
+  transition: all 0.2s linear;
+  background-color: var(--blue-50);
 }
 
 p {
@@ -307,15 +282,14 @@ ul {
 }
 
 .book-filters {
-  display: grid;
+  display: none;
+  padding: var(--height-1);
   place-items: center;
-  width: 20rem;
+  width: var(--height-20);
   grid-template-areas: "a b" "c d" "e f";
   grid-template-columns: 80% 20%;
-  padding: var(--font-100);
   row-gap: var(--font-50);
-  position: relative;
-  transform: translateX(calc(-80% - var(--font-100)));
+  transform: translateX(calc(-80%));
   transition: all 0.5s linear;
 }
 .book-filters button {
@@ -324,10 +298,6 @@ ul {
   width: 2rem;
   background-color: inherit;
   font-size: var(--font-150);
-  border: none;
-  border-radius: var(--font-25);
-  outline: none;
-  color: var(--blue-40);
 }
 .book-filters .price-range {
   grid-area: a;
@@ -347,6 +317,30 @@ ul {
 
 .show-filters {
   transform: translateX(0);
+}
+
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: var(--height-1);
+  width: 90vw;
+  background-color: var(--blue-85);
+}
+.center-container .books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+}
+
+.sort-bar {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 0 var(--font-50);
+  width: 100%;
+  height: var(--height-2);
+  background-color: var(--blue-75);
 }
 
 /*# sourceMappingURL=main.css.map */

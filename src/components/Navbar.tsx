@@ -1,6 +1,7 @@
 import React, {useRef, useEffect, useState} from 'react'
 import { Link } from 'react-router-dom'
 import {FaBars} from 'react-icons/fa';
+import {GiBookshelf} from 'react-icons/gi';
 
 const Navbar:React.FC = () => {
     const containerRef = useRef<HTMLDivElement|null>(null);
@@ -28,7 +29,7 @@ const Navbar:React.FC = () => {
                 }
             }
         }
-        if(!target.classList.contains('container')){
+        if(!target.classList.contains('container') && !target.classList.contains('search-bar')){
             target.classList.add('active')
         }
     }
@@ -43,11 +44,21 @@ const Navbar:React.FC = () => {
 
     return (
         <nav className="navbar">
+            <Link to='/home'>
+                <button className="logo">
+                    <GiBookshelf />
+                </button>
+            </Link>
             <ul className="nav-list" ref={listRef}>
-               <div className="container" ref={containerRef}>
-               <input type="text" placeholder="Search" className="search-bar"/>
-               <li>
-                    <Link to='/'>
+                <div className="container" ref={containerRef}>
+                <input type="text" placeholder="Search" className="search-bar"/>
+                <li>
+                    <Link to='/books'>
+                        Products
+                    </Link>
+                </li>
+                <li>
+                    <Link to='/home'>
                         Home
                     </Link>
                 </li>
