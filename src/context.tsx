@@ -22,7 +22,7 @@ const AppProvider:React.FC<Props> = ({children})=>{
     }
 
     const getBooks = async ()=>{
-        const response = await axios.get(baseUrl, {headers:{
+        const response = await axios.get(`${baseUrl}/books/`, {headers:{
             'Authorization':`Basic ${token}`
         }});
         setBooks(response.data.Books);
