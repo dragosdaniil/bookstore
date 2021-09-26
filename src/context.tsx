@@ -26,7 +26,7 @@ const AppProvider:React.FC<Props> = ({children})=>{
         const response = await axios.get(baseUrl, {headers:{
             'Authorization':`Basic ${token}`
         }});
-        setBooks(response.data);
+        setBooks(response.data.Books);
     }
 
     useEffect(() => {getBooks()}, [])
