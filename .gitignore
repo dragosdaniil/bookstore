@@ -11,6 +11,7 @@
 # production
 /build
 .env
+local.cnf.ts
 
 # misc
 .DS_Store
