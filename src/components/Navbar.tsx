@@ -9,19 +9,15 @@ const Navbar:React.FC = () => {
     const [dropdown, setDropdown] = useState(false);
     
     const toggleDropdown = ()=>{
-        if(listRef.current){
-            if(dropdown){
-                listRef.current.style.height = '0px';
-            }else if (containerRef.current){
-                listRef.current.style.height = `${containerRef.current.offsetHeight}px`
-            }
+        if(containerRef.current){
+            containerRef.current.classList.toggle('dropdown');
             setDropdown(!dropdown);
         }
     }
 
     const handleClick = (e:any) => {
         const target = e.target;
-        const childs:HTMLCollection|undefined = document.querySelector('.container')?.children;
+        const childs:HTMLCollection|undefined = document.querySelector('.nav-list')?.children;
         if(childs){
             for(let i=0;i<childs?.length;i++){
                 if(!childs[i].classList.contains('search-bar')){
@@ -29,15 +25,15 @@ const Navbar:React.FC = () => {
                 }
             }
         }
-        if(!target.classList.contains('container') && !target.classList.contains('search-bar')){
+        if(!target.classList.contains('nav-list') && !target.classList.contains('search-bar')){
             target.classList.add('active')
         }
     }
 
     useEffect(() => {
-        if(containerRef.current){
-            containerRef.current.addEventListener('click',(e:any)=>handleClick(e))
-            return containerRef.current.removeEventListener('click',handleClick)
+        if(listRef.current){
+            listRef.current.addEventListener('click',(e:any)=>handleClick(e))
+            return listRef.current.removeEventListener('click',handleClick)
         }
     }, [])
     
@@ -49,8 +45,9 @@ const Navbar:React.FC = () => {
                     <GiBookshelf />
                 </button>
             </Link>
+            <div className="container" ref={containerRef}>
             <ul className="nav-list" ref={listRef}>
-                <div className="container" ref={containerRef}>
+                
                 <input type="text" placeholder="Search" className="search-bar"/>
                 <li>
                     <Link to='/books'>
@@ -74,8 +71,9 @@ const Navbar:React.FC = () => {
                         About
                     </Link>
                 </li>
-               </div>
+               
             </ul>
+            </div>
             <button className="toggle-btn" onClick={toggleDropdown}>
                 <FaBars/>
             </button>            

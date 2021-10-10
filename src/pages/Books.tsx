@@ -1,10 +1,8 @@
-import React from 'react'
 import { useGlobalContext } from '../context'
 import SingleBook from '../components/SingleBook';
 import { bookTypes } from '../types/customTypes';
 import FilterMenu from '../components/FilterMenu';
-import Sort
- from '../components/Sort';
+import Sort from '../components/Sort';
 const Books = () => {
     const {books} = useGlobalContext();
     return (

@@ -9,6 +9,9 @@
     background-color: var(--blue-85);
     .books-container{
         display: grid;
+        gap:var(--height-1);
+        place-items: center;
+        width: 100%;
         grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
     }
 }

@@ -112,7 +112,7 @@ nav {
   align-items: center;
   background-color: var(--blue-75);
 }
-nav ul {
+nav div.container {
   display: flex;
   position: absolute;
   top: var(--height-5);
@@ -120,10 +120,20 @@ nav ul {
   height: 0;
   width: 100%;
   overflow: hidden;
-  transition: all 0.5s linear;
+  z-index: 2;
   background-color: inherit;
+  transition: all 0.5s linear;
 }
-nav ul input {
+nav div.container ul {
+  display: flex;
+  margin: 0 auto;
+  padding: var(--font-50);
+  height: var(--height-10);
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+nav div.container ul input {
   margin: 0 auto;
   width: 100%;
   max-width: 350px;
@@ -134,36 +144,30 @@ nav ul input {
   outline: none;
   font-size: var(--font-125);
 }
-nav ul input:focus {
+nav div.container ul input:focus {
   border-color: var(--blue-30);
 }
-nav ul input::placeholder {
+nav div.container ul input::placeholder {
   display: flex;
   align-items: center;
   padding-left: var(--font-50);
   font-size: var(--font-125);
 }
-nav ul .container {
-  display: flex;
-  margin: 0 auto;
-  padding: var(--font-50);
-  height: var(--height-10);
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-}
-nav ul li {
+nav div.container ul li {
   height: 100%;
   display: flex;
   place-items: center;
 }
-nav ul li a {
+nav div.container ul li a {
   color: var(--blue-35);
   font-size: var(--font-125);
   text-decoration: none;
 }
-nav ul .active {
+nav div.container ul .active {
   border-bottom: 2px solid var(--blue-35);
+}
+nav div.dropdown {
+  height: var(--height-10);
 }
 
 @media screen and (min-width: 600px) {
@@ -173,21 +177,21 @@ nav ul .active {
   nav .toggle-btn {
     display: none;
   }
-  nav ul {
-    position: static;
+  nav div.container {
+    position: static !important;
     height: inherit !important;
     transition: none;
   }
-  nav ul input {
-    height: var(--font-250);
-  }
-  nav ul .container {
+  nav div.container ul {
     height: inherit !important;
     width: 100%;
     flex-direction: row;
     column-gap: var(--height-1);
   }
-  nav ul .container li:nth-of-type(1) {
+  nav div.container ul input {
+    height: var(--font-250);
+  }
+  nav div.container ul li:nth-of-type(1) {
     margin-left: auto;
   }
 }
@@ -330,6 +334,9 @@ ul {
 }
 .center-container .books-container {
   display: grid;
+  gap: var(--height-1);
+  place-items: center;
+  width: 100%;
   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
 }
 
